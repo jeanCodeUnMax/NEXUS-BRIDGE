@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { width: 260px; background: #111318; color: #e8eaf0; font-family: system-ui, sans-serif; font-size: 13px; }
+    .header { padding: 12px; background: #181c23; border-bottom: 1px solid #2a3040; display: flex; align-items: center; gap: 8px; }
+    .logo { width: 24px; height: 24px; border-radius: 6px; background: linear-gradient(135deg, #4a9eff, #7c4dff); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+    .title { font-weight: 700; letter-spacing: 0.05em; }
+    .subtitle { font-size: 9px; color: #5d6a7e; letter-spacing: 0.1em; }
+    .section { padding: 10px 12px; border-bottom: 1px solid #2a3040; }
+    .label { font-size: 10px; color: #5d6a7e; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 600; }
+    .provider { display: flex; align-items: center; gap: 8px; padding: 4px 0; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dot.active { background: #2ecc71; }
+    .dot.inactive { background: #2a3040; border: 1px solid #3d4d63; }
+    .name { flex: 1; font-size: 12px; color: #9aa3b5; }
+    .status { font-size: 10px; color: #5d6a7e; }
+    .footer { padding: 10px 12px; }
+    a { color: #4a9eff; text-decoration: none; font-size: 11px; }
+    a:hover { text-decoration: underline; }
+    .tip { font-size: 10px; color: #5d6a7e; margin-top: 6px; line-height: 1.4; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">N</div>
+    <div>
+      <div class="title">NEXUS Bridge</div>
+      <div class="subtitle">DOM BRIDGE EXTENSION</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="label">Providers enregistrés</div>
+    <div id="providers-list">
+      <div style="color:#5d6a7e;font-size:11px;">Chargement…</div>
+    </div>
+  </div>
+  <div class="footer">
+    <a href="http://localhost:5173" target="_blank">→ Ouvrir NEXUS Bridge</a>
+    <div class="tip">
+      Ouvrez chaque site AI et connectez-vous pour activer le bridge DOM.
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+{
+  "api": [
+    {
+      "id": "ollama",
+      "name": "Ollama (Local)",
+      "type": "api",
+      "icon": "🦙",
+      "color": "#4a9eff",
+      "baseUrl": "http://localhost:11434",
+      "endpoint": "/api/chat",
+      "defaultModel": "ministral-3:latest",
+      "models": ["ministral-3:latest", "ministral-3:8b", "qwen3.5:9b", "qwen3.5:0.8b", "glm-ocr:latest", "minimax-m3:cloud", "llama3.2", "llama3.1", "mistral", "codestral", "phi3", "gemma2"],
+      "requiresKey": false,
+      "streaming": true
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic (API)",
+      "type": "api",
+      "icon": "🔮",
+      "color": "#cc785c",
+      "baseUrl": "https://api.anthropic.com",
+      "endpoint": "/v1/messages",
+      "defaultModel": "claude-sonnet-4-6",
+      "models": ["claude-opus-4-6", "claude-sonnet-4-6", "claude-haiku-4-5-20251001"],
+      "requiresKey": true,
+      "keyLabel": "ANTHROPIC_API_KEY",
+      "streaming": true
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "type": "api",
+      "icon": "🔀",
+      "color": "#7c4dff",
+      "baseUrl": "https://openrouter.ai/api",
+      "endpoint": "/v1/chat/completions",
+      "defaultModel": "mistralai/mistral-7b-instruct:free",
+      "models": [
+        "mistralai/mistral-7b-instruct:free",
+        "google/gemma-7b-it:free",
+        "meta-llama/llama-3.1-8b-instruct:free",
+        "qwen/qwen-2-7b-instruct:free"
+      ],
+      "requiresKey": true,
+      "keyLabel": "OPENROUTER_API_KEY",
+      "streaming": true
+    },
+    {
+      "id": "groq",
+      "name": "Groq (Ultra-fast)",
+      "type": "api",
+      "icon": "⚡",
+      "color": "#f59e0b",
+      "baseUrl": "https://api.groq.com/openai",
+      "endpoint": "/v1/chat/completions",
+      "defaultModel": "llama-3.1-8b-instant",
+      "models": ["llama-3.1-8b-instant", "llama-3.3-70b-versatile", "mixtral-8x7b-32768", "gemma2-9b-it"],
+      "requiresKey": true,
+      "keyLabel": "GROQ_API_KEY",
+      "streaming": true
+    }
+  ],
+  "dom_bridge": [
+    {
+      "id": "chatgpt-free",
+      "name": "ChatGPT (Free)",
+      "type": "dom",
+      "icon": "🤖",
+      "color": "#10a37f",
+      "url": "https://chatgpt.com",
+      "selectors": {
+        "input": "#prompt-textarea",
+        "submit": "button[data-testid='send-button']",
+        "response": ".markdown",
+        "streaming_signal": ".result-streaming",
+        "stop_button": "button[aria-label='Stop streaming']"
+      },
+      "inject_method": "textarea",
+      "note": "Ouvrir et se connecter manuellement avant usage"
+    },
+    {
+      "id": "claude-free",
+      "name": "Claude.ai (Free)",
+      "type": "dom",
+      "icon": "🔮",
+      "color": "#cc785c",
+      "url": "https://claude.ai",
+      "selectors": {
+        "input": "div[contenteditable='true'][data-placeholder]",
+        "response": "div.font-claude-message",
+        "streaming_signal": "[data-is-streaming='true']"
+      },
+      "inject_method": "contenteditable",
+      "note": "Session manuelle requise"
+    },
+    {
+      "id": "gemini-free",
+      "name": "Gemini (Free)",
+      "type": "dom",
+      "icon": "✨",
+      "color": "#4285f4",
+      "url": "https://gemini.google.com",
+      "selectors": {
+        "input": "div.ql-editor",
+        "response": "message-content",
+        "streaming_signal": ".loading-indicator"
+      },
+      "inject_method": "contenteditable",
+      "note": "Connexion Google requise"
+    },
+    {
+      "id": "mistral-free",
+      "name": "Mistral Le Chat (Free)",
+      "type": "dom",
+      "icon": "🌊",
+      "color": "#ff6b35",
+      "url": "https://chat.mistral.ai",
+      "selectors": {
+        "input": "textarea[placeholder]",
+        "response": ".prose",
+        "streaming_signal": ".animate-pulse"
+      },
+      "inject_method": "textarea",
+      "note": "Compte Mistral requis"
+    },
+    {
+      "id": "perplexity-free",
+      "name": "Perplexity (Free)",
+      "type": "dom",
+      "icon": "🔍",
+      "color": "#20b2aa",
+      "url": "https://www.perplexity.ai",
+      "selectors": {
+        "input": "textarea[placeholder]",
+        "response": ".prose",
+        "streaming_signal": ".animate-spin"
+      },
+      "inject_method": "textarea",
+      "note": "Pas de compte nécessaire"
+    }
+  ]
+}
