@@ -88,3 +88,6 @@ Puis rechargez l'extension dans `chrome://extensions/`.
 | Gemini | DOM Bridge | Gemini (Free) | Non (session) |
 | Mistral | DOM Bridge | Mistral (Free) | Non (session) |
 | Perplexity | DOM Bridge | Perplexity (Free) | Non (session) |
+
+test de signature
+allo
